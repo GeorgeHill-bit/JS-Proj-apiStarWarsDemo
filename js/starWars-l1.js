@@ -1,9 +1,16 @@
-var starWarsFilmsH4 = document.querySelector('h4');
-var starWarsFilmsH5 = document.querySelector('h5');
-var starWarsFilmsH6 = document.querySelector('h6');
+// var starWarsFilmsH4 = document.querySelector('h4');
+// var starWarsFilmsH5 = document.querySelector('h5');
+// var starWarsFilmsH6 = document.querySelector('h6');
 var films;
 var queryAPI;
-// console.log('Entry: queryAPI = ', queryAPI);
+var filmTitles =[["A New Hope",0],
+                ["Attack of the Clones",1],
+                ["The Phantom Menace",2],
+                ["Revenge of the Sith",3],
+                ["Return of the Jedi",4],
+                ["The Empire Strikes Back",5]
+                ["The Force Awakens",6]
+                ];
 
 const url = 'https://swapi.co/api/films'
    queryAPI = 1;
@@ -18,34 +25,42 @@ const url = 'https://swapi.co/api/films'
         console.log("films results: ", films);
         let x = 0; 
         for(f of films) {
-            let listItem = document.createElement('p');
-            listItem.innerHTML =  f.title; 
-            starWarsFilmsH4.appendChild(listItem);
+            let li1 = document.createElement('p');
+            li1.innerText =  f.title; 
+            swFilm.appendChild(li1);
         }
-        let listItem = document.createElement('br');
-        starWarsFilmsH4.appendChild(listItem);
+        let li1 = document.createElement('br');
+        swFilm.appendChild(li1);
     });
         
         swMovieButton.addEventListener('click', (event) => {
             queryAPI++;
             let list = document.getElementById("swMovieName");
             console.log('Click: ', swMovieName, ' list:',list.innerText);
-            console.log('Entry '+queryAPI+ ' Movie: ', list.value, 'URL: ', f.url);
+            console.log('Entry '+queryAPI+ ' Movie: ', list.value);
+            let swDetails = document.getElementById("swDetails");
             let films1 = films[4];
             console.log("films results: ", films1);
-            let listItem = document.createElement('p');
-            listItem.innerHTML =  films1.title; 
-            starWarsFilmsH5.appendChild(listItem);
-            listItem.innerHTML =  '   URL: ' + films1.url;
-            starWarsFilmsH5.appendChild(listItem);
-            listItem.innerHTML =  '   Director: ' + films1.director;
-            starWarsFilmsH5.appendChild(listItem);
-            listItem.innerHTML =  '   Producer: ' + films1.producer;
-            starWarsFilmsH5.appendChild(listItem);
-            listItem.innerHTML =  films1.opening_crawl;
-            starWarsFilmsH6.appendChild(listItem);
-            listItem.innerHTML =  '   Episode: ' + films1.opening_crawl;
-            starWarsFilmsH5.appendChild(listItem);
-            listItem.innerHTML =  '   Release Date: ' + films1.release_date;
-            starWarsFilmsH5.appendChild(listItem);
+            let liTitle = document.createElement('li');
+            let liURL = document.createElement('li')
+            let liDirector = document.createElement('li')
+            let liProducer = document.createElement('li')
+            let liOpeningCrawl = document.createElement('li')
+            let liEpisodeId = document.createElement('li')
+            let liReleaseDate = document.createElement('li')
+
+            liTitle.innerText = ' ' + films1.title; 
+            swDetails.appendChild(liTitle);
+            liURL.innerText = '   URL: ' + films1.url;
+            swDetails.appendChild(liURL);
+            liDirector.innerText = '   Director: ' + films1.director;
+            swDetails.appendChild(liDirector);
+            liProducer.innerText = '   Producer(s): ' + films1.producer;
+            swDetails.appendChild(liProducer);
+            liOpeningCrawl.innerText =  films1.opening_crawl;
+            swCrawl.appendChild(liOpeningCrawl);
+            liEpisodeId.innerText = '   Episode: ' + films1.episode_id;
+            swDetails.appendChild(liEpisodeId);
+            liReleaseDate.innerText = '   Release Date: ' + films1.release_date;
+            swDetails.appendChild(liReleaseDate);
          });
