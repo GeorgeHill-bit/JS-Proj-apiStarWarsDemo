@@ -1,0 +1,67 @@
+/* Variables used throughout will go here. */
+/* EFA Color pallete */
+/* CSS code for the jumbotron section. */
+.jumbotron {
+  background-image: url("assets/img/Andromeda.jpg") no-repeat center center;
+  color: black;
+  padding-top: 1px;
+  padding-bottom: 1px; }
+
+/****************************
+Body Section
+****************************/
+body {
+  background-color: white; }
+
+header {
+  text-align: center; }
+
+.section-title h2 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  position: relative; }
+
+/* ------------------------------
+movies Section
+--------------------------------*/
+#movie-buttons {
+  /* defaults: background: #fff; padding: 25px 0*/
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding: 0 0; }
+
+#movie-details {
+  /* defaults: background: #fff; padding: 25px 0*/
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding: 0 0; }
+
+#movie {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  color: #f0e15a;
+  text-align: center;
+  font-style: italic;
+  font-size: 40px; }
+
+/* CSS code for the Footer section. */
+footer {
+  /* Default: padding-top: 3rem; padding-bottom: 3rem; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /* Default: background-color: $red; */
+  background-color: black;
+  font-size: 18px;
+  /* Default: ground-color: $green; */
+  color: lightslategray; }
+
+footer p {
+  margin-bottom: .25rem; }
