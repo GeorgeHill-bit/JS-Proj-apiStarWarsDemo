@@ -1,5 +1,5 @@
 {
-  "name": "JS.151.PortfolioStarter",
+  "name": "ls",
   "version": "1.0.0",
   "description": "A repo for getting started on developer portfolio.",
   "main": "gulpfile.js",
@@ -9,11 +9,11 @@
   "author": "Thomas B. Flynn",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.23.5",
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.2",
+    "gulp-clean-css": "^3.9.3",
     "gulp-filter": "^5.1.0",
-    "gulp-header": "^1.8.9",
+    "gulp-header": "^1.8.12",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
@@ -26,5 +26,9 @@
     "jquery": "^3.2.1",
     "magnific-popup": "^1.1.0",
     "wowjs": "^1.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git status"
   }
 }

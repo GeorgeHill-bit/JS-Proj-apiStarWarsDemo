@@ -36,7 +36,7 @@
     <header class="jumbotron text-center" id="main-header">
         <div class="container">
             <h1 class="jumbotron-heading">Star Wars API</h1>
-            <div class="section-description wow fadeInUp" data-wow-duration="3s">
+            <div class="jumbotron-text wow fadeInUp" data-wow-duration="3s">
                 <p class="lead text-muted">Star Wars has fascinated people for years.  I decided to expand on the Star Wars API to provide some more detailed information of the films...</p>
             </div>
             
@@ -51,29 +51,29 @@
         <div class="container wow fadeInUp">
             <div class="row">
                 <div class="col-sm-6 col-md-3">
-                    <h2 class="movie-list" align="center">Star Wars Films</h2>
+                    <h2 class="movie-list" align="center" >Films</h2>
                     <p class="movie-list" align="left"></p>
                     <ul id="swFilm">
                     </ul>
                     <div class="form-group">
                         <label for="usr">Movie:</label>
                         <input type="text" class="form-control" id="swMovieName">
+                        <br>
                         <button id=swMovieButton class="btn btn-info btn-lg btn-block">Submit</button>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 wow fadeinup">
-                    <h2 class="movie-crawl" align="center">Crawl</h2>
-                    <p class="movie-crawl" align="left"></p>
-                    <ul id="swCrawl">
-                    </ul>
-                </div>
                 <div class="col-sm-6 col-md-6">
-                    <h2 class="movie-details" align="center">Star Wars Details</h2>
+                    <h2 class="movie-details" align="center">Details</h2>
                     <p class="movie-details" align="left"></p>
                     <ul id="swDetails">
                     </ul>
                 </div>
-                <br>
+                <div class="col-sm-6 col-md-3 wow fadeInUp">
+                    <h2 class="movie-crawl" align="center">Opening Crawl</h2>
+                    <p class="movie-crawl" align="left"></p>
+                    <ul id="swCrawl">
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- </div> -->

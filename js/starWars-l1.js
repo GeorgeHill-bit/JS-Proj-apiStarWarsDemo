@@ -3,14 +3,14 @@
 // var starWarsFilmsH6 = document.querySelector('h6');
 var films;
 var queryAPI;
-var filmTitles =[["A New Hope",0],
-                ["Attack of the Clones",1],
-                ["The Phantom Menace",2],
-                ["Revenge of the Sith",3],
-                ["Return of the Jedi",4],
-                ["The Empire Strikes Back",5]
-                ["The Force Awakens",6]
-                ];
+var filmTitles = [["A New Hope",0],
+                 ["Attack of the Clones",1],
+                 ["The Phantom Menace",2],
+                 ["Revenge of the Sith",3],
+                 ["Return of the Jedi",4],
+                 ["The Empire Strikes Back",5]
+                 ["The Force Awakens",6]
+                 ];
 
 const url = 'https://swapi.co/api/films'
    queryAPI = 1;
@@ -36,10 +36,17 @@ const url = 'https://swapi.co/api/films'
         swMovieButton.addEventListener('click', (event) => {
             queryAPI++;
             let list = document.getElementById("swMovieName");
-            console.log('Click: ', swMovieName, ' list:',list.innerText);
             console.log('Entry '+queryAPI+ ' Movie: ', list.value);
+            let i=0;
+            for (i=0; i<=6; i++) {
+                console.log("For film ",i,filmTitles[i], list.value);
+                if (filmTitles[i] == list.value) {
+                    let filmIndex = filmTitles[i];
+                    break;
+                }
+            };
             let swDetails = document.getElementById("swDetails");
-            let films1 = films[4];
+            let films1 = films[filmIndex];
             console.log("films results: ", films1);
             let liTitle = document.createElement('li');
             let liURL = document.createElement('li')
@@ -49,7 +56,7 @@ const url = 'https://swapi.co/api/films'
             let liEpisodeId = document.createElement('li')
             let liReleaseDate = document.createElement('li')
 
-            liTitle.innerText = ' ' + films1.title; 
+            liTitle.innerText = 'Title: ' + films1.title; 
             swDetails.appendChild(liTitle);
             liURL.innerText = '   URL: ' + films1.url;
             swDetails.appendChild(liURL);
